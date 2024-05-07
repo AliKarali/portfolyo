@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="container row projects">
+    {% for project in projects %}
+    <div class="col-4 mt-5 cards">
+        
+    <div class="card projects" style="width: 18rem;">
+        <img src="{{project.projectImage.url}}" class="card-img-top img-thumbnail" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{project.projectName}}</h5>
+          <a href="{{project.projectURL}}" class="btn btn-primary" target="_blank">Ziyaret Et</a>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endblock body %}
